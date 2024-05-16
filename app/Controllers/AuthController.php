@@ -26,7 +26,7 @@ class AuthController extends Controller
             $password = $this->request->getPost('password');
             
             // Attempt to retrieve the user with the provided username
-            $user = $this->authModel->where('username', $username)->first();
+            $user = $this->authModel->where('email', $username)->first();
 
             if (password_verify($password, $user['password'])) {
                 // Check if the user's flag is set to 1

@@ -38,7 +38,7 @@ $routes->get('logout', 'AuthController::logout');
 
 $routes->get('register_user', 'AuthController::form_register');
 $routes->post('proses_register_user', 'AuthController::proses_register_user');
-// $routes->get('activate/(:any)', 'AuthController::activate/$1');
+$routes->get('activate/(:any)', 'AuthController::activate/$1');
 
 
 $routes->get('lupa_password', 'AuthController::lupa_password');

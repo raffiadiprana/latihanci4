@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 
 class BeritaModel extends Model
 {
-    protected $table = 'berita';
+    protected $table = 'articles';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;

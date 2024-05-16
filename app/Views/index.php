@@ -296,6 +296,19 @@
                                         </p>
                                     </div>
                                 </li>
+                                <li class="splide__slide">
+                                    <div class="bg-white border border-secondary border-3 p-4" style="border-radius: 37px">
+                                        <h5>Nama</h5>
+                                        <img src="/img/star.png" alt="bintang" class="img-fluid" />
+                                        <div class="d-flex align-items-center w-100">
+                                            <img src="/img/Calendar.png" alt="kalender" class="img-fluid me-2" />
+                                            <span class="my-auto">3 April 2024</span>
+                                        </div>
+                                        <p>
+                                            presiden baik, mentri agamanya juga baik, istananya
+                                            menjadi istana mewah
+                                        </p>
+                                    </div>
                             </ul>
                         </div>
                     </div>
