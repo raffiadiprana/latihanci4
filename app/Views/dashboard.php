@@ -13,12 +13,10 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<?php echo base_url('css/sb-admin-2.min.css');?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('css/sb-admin-2.min.css'); ?>" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -45,60 +43,56 @@
             <li class="nav-item active">
                 <a class="nav-link" href="<?= site_url('admin') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Payment</span></a>
+                    <span>Article</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('admin/schedule') ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Schedule</span></a>
+                <a class="nav-link" href="/logout">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Log out</span>
+                </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('admin/appoinment') ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Appoinment</span></a>
-            </li>
-            
-                    </ul>
 
-                </nav>
-                <!-- End of Topbar -->
+        </ul>
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+        </nav>
+        <!-- End of Topbar -->
 
-                <div class="row"> 
-                <?php foreach($berita as $key => $post) : ?>
-              
-    <div class="card my-3">
-      <div class="card-body">
-        <h5 class="card-title"><?php echo $post['judul'] ?></h5>
-        <p class="card-text"><?php echo $post['berita'] ?></p>
-        <a href="<?= site_url('admin/edit_berita/' . $post['id']) ?>" class="btn btn-info">Verifikasi</a>
-        <a href="<?= site_url('admin/delete_berita/' . $post['id']) ?>" class="btn btn-danger">Batal</a>
-      </div>
-    </div>
-  <?php endforeach ?>
-  </div>
-  </div>
-                <!-- /.container-fluid -->
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
 
-            </div>
-            <!-- End of Main Content -->
+            <div class="row">
+                <?php foreach ($berita as $key => $post) : ?>
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; MindSpace 2024</span>
+                    <div class="card my-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $post['judul'] ?></h5>
+                            <p class="card-text"><?php echo $post['berita'] ?></p>
+                            <a href="<?= site_url('admin/edit_berita/' . $post['id']) ?>" class="btn btn-info">Verifikasi</a>
+                            <a href="<?= site_url('admin/delete_berita/' . $post['id']) ?>" class="btn btn-danger">Batal</a>
+                        </div>
                     </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
+                <?php endforeach ?>
+            </div>
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; MindSpace 2024</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
@@ -109,8 +103,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

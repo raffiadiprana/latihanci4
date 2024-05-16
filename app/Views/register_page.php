@@ -1,60 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrasi User Baru</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-image: url('https://source.unsplash.com/1600x900/?technology');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            margin: 0;
-            padding: 20px;
-            color: #000; 
-        }
-        .form-container {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
-            margin-top: 100px;
-        }
-    </style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mindspace - Login</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" type="text/css">
+
+
 </head>
-<body>
 
-<div class="container form-container">
-    <h1 class="mb-4">Registrasi User Baru</h1>
-    <?php if(session()->getFlashdata('error')):?>
-        <div style="color: red;">
-            <?= session()->getFlashdata('error') ?>
-        </div>
-    <?php endif; ?>
-    <form action="<?= site_url('proses_register_user'); ?>" method="post">
-        <div class="form-group">
-            <label for="nama">Nama Lengkap:</label>
-            <input type="text" name="nama" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" name="username" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="text" name="password" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="text" name="email" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Register</button>
-    </form>
-</div>
+<body class="bg-gradient-primary">
 
+    <div class="container">
 
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <!-- Replace the background image class with the new image -->
+                            <div class="col-lg-6 d-none d-lg-block bg-psychology-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Register</h1>
+                                    </div>
+                                    <form class="user" action="<?= site_url('proses_register_user'); ?>" method="post">
+                                        <div class="form-group">
+                                            <input name="nama" type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Fullname...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="username" type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                        <hr>
+                                    </form>
+                                    <div class="text-center">
+                                        <a class="small" href="/login">Already have an account?</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
