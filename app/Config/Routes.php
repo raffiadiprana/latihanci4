@@ -12,17 +12,17 @@ $routes->get('/', function () {
 $routes->group('admin', ['filter' => 'auth'], function ($routes) {
 
     $routes->get('', 'DashboardController::index');
-    $routes->get('delete_berita/(:num)', 'DashboardController::delete/$1');
+    $routes->get('delete_article/(:num)', 'DashboardController::delete/$1');
 });
 
 $routes->group('user', ['filter' => 'auth'], function ($routes) {
 
     $routes->get('', 'LandingController::index');
-    $routes->get('isi_berita', 'LandingController::create');
-    $routes->post('berita_store', 'LandingController::store');
-    $routes->get('edit_berita/(:num)', 'LandingController::edit/$1');
-    $routes->post('update_berita/(:num)', 'LandingController::update/$1');
-    $routes->get('delete_berita/(:num)', 'LandingController::delete/$1');
+    $routes->get('isi_article', 'LandingController::create');
+    $routes->post('article_store', 'LandingController::store');
+    $routes->get('edit_article/(:num)', 'LandingController::edit/$1');
+    $routes->post('update_article/(:num)', 'LandingController::update/$1');
+    $routes->get('delete_article/(:num)', 'LandingController::delete/$1');
 });
 
 // $routes->get('register_user', 'AuthController::registerView');

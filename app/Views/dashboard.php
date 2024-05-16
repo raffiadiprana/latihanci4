@@ -69,8 +69,8 @@
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $post['judul'] ?></h5>
                             <p class="card-text"><?php echo $post['berita'] ?></p>
-                            <a href="<?= site_url('admin/edit_berita/' . $post['id']) ?>" class="btn btn-info">Verifikasi</a>
-                            <a href="<?= site_url('admin/delete_berita/' . $post['id']) ?>" class="btn btn-danger">Batal</a>
+                            <a href="<?= site_url('admin/edit_article/' . $post['id']) ?>" class="btn btn-info">Verifikasi</a>
+                            <a href="<?= site_url('admin/delete_article/' . $post['id']) ?>" class="btn btn-danger">Batal</a>
                         </div>
                     </div>
                 <?php endforeach ?>
