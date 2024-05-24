@@ -25,6 +25,18 @@ $routes->group('user', ['filter' => 'auth'], function ($routes) {
     $routes->get('delete_article/(:num)', 'LandingController::delete/$1');
 });
 
+$routes->group('test', function (RouteCollection $routes) {
+    $routes->get('burnout', 'TestController::index');
+    $routes->post('burnout', 'TestController::calculateBurnOutForm');
+    $routes->get('depresion', 'TestController::burnout');
+    $routes->post('depresion', 'TestController::depresionProcess');
+    $routes->get('stres', 'TestController::stres');
+    $routes->post('stres', 'TestController::stresProcess');
+    $routes->get('anxiety', 'TestController::anxiety');
+    $routes->post('anxiety', 'TestController::anxietyProcess');
+    $routes->get('result', 'TestController::result');
+});
+
 // $routes->get('register_user', 'AuthController::registerView');
 
 

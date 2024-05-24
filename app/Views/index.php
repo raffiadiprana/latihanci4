@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="/css/style.css" />
     <!-- slider -->
     <link rel="stylesheet" href="/css/splide.min.css" />
+
+    <style>
+        .navigators {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -72,23 +78,23 @@
 
                         <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-5">
                             <a href="form-1.html" style="text-decoration: none"></a>
-                            <div class="rounded d-flex flex-column justify-content-center align-items-center" style="background-color: #13d726; width: 160px; height: 160px">
+                            <div onclick="onNavigate('burnout')" class="rounded d-flex flex-column justify-content-center align-items-center navigators" style="background-color: #13d726; width: 160px; height: 160px">
                                 <img src="/img/Fire.png" class="img-fluid w-50" alt="mental test image" />
                                 <span class="fw-bold text-white">Burnout</span>
                             </div>
-                            <div class="rounded d-flex flex-column justify-content-center align-items-center" style="background-color: #4d7df0; width: 160px; height: 160px">
+                            <div onclick="onNavigate('depresion')" class="rounded d-flex flex-column justify-content-center align-items-center navigators" style="background-color: #4d7df0; width: 160px; height: 160px">
                                 <img src="/img/Brain.png" class="img-fluid w-50" alt="mental test image" />
                                 <span class="fw-bold text-white">Depresi</span>
                             </div>
-                            <div class="rounded d-flex flex-column justify-content-center align-items-center" style="background-color: #f04d4d; width: 160px; height: 160px">
+                            <div onclick="onNavigate('stres')" class="rounded d-flex flex-column justify-content-center align-items-center navigators" style="background-color: #f04d4d; width: 160px; height: 160px">
                                 <img src="/img/Distressed Woman.png" class="img-fluid w-50" alt="mental test image" />
                                 <span class="fw-bold text-white">Stress</span>
                             </div>
-                            <div class="rounded d-flex flex-column justify-content-center align-items-center" style="background-color: #0ba448; width: 160px; height: 160px">
+                            <div class="rounded d-flex flex-column justify-content-center align-items-center navigators" style="background-color: #0ba448; width: 160px; height: 160px">
                                 <img src="/img/Trust.png" class="img-fluid w-50" alt="mental test image" />
                                 <span class="fw-bold text-white">Wellbeing </span>
                             </div>
-                            <div class="rounded d-flex flex-column justify-content-center align-items-center" style="background-color: #a80cc2; width: 160px; height: 160px">
+                            <div onclick="onNavigate('anxiety')" class="rounded d-flex flex-column justify-content-center align-items-center navigators" style="background-color: #a80cc2; width: 160px; height: 160px">
                                 <img src="/img/Fire.png" class="img-fluid w-50" alt="mental test image" />
                                 <span class="fw-bold text-white">Kecemasan</span>
                             </div>
@@ -296,19 +302,6 @@
                                         </p>
                                     </div>
                                 </li>
-                                <li class="splide__slide">
-                                    <div class="bg-white border border-secondary border-3 p-4" style="border-radius: 37px">
-                                        <h5>Nama</h5>
-                                        <img src="/img/star.png" alt="bintang" class="img-fluid" />
-                                        <div class="d-flex align-items-center w-100">
-                                            <img src="/img/Calendar.png" alt="kalender" class="img-fluid me-2" />
-                                            <span class="my-auto">3 April 2024</span>
-                                        </div>
-                                        <p>
-                                            presiden baik, mentri agamanya juga baik, istananya
-                                            menjadi istana mewah
-                                        </p>
-                                    </div>
                             </ul>
                         </div>
                     </div>
@@ -383,9 +376,6 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
     <script src="/js/bootstrap.old.bundle.min.js"></script>
 
     <script src="/js/splide.min.js"></script>
@@ -432,6 +422,10 @@
             });
             splide1.mount();
         });
+
+        function onNavigate(resource) {
+            window.location.href = "/test/" + resource;
+        }
     </script>
 </body>
 
